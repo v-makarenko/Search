@@ -6,9 +6,8 @@ $(function() {
     $("#myForm").on("submit", function(e) {
         e.preventDefault();
         var data = new FormData();
-        $.each(jQuery('#file')[0].files, function (i, file) {
-            data.append('file-' + i, file);
-        });
+        data.append('file', jQuery('#file')[0].files[0]);
+
 
         jQuery.ajax({
             url: $(this).attr("action"),
