@@ -9,6 +9,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +25,22 @@ public class SearchResource {
         List<ImageDto> dtoList = new ArrayList<>();
         // TODO remove before flight
         ImageDto dto1 = new ImageDto();
+        dto1.setWidth(640);
+        dto1.setHeight(480);
+        dto1.setLink("http://pornhub.com");
+        dto1.setLinkToOrigin("http://vk.com");
+        dto1.setName("Крутая пикча");
+        dto1.setSize(new BigDecimal("120210925"));
+//        dto1.setPreview();
+        dto1.setLink("http://pornhub.com");
         ImageDto dto2 = new ImageDto();
+        dto1.setWidth(320);
+        dto1.setHeight(240);
+        dto1.setLink("http://google.com");
+        dto1.setLinkToOrigin("http://makarenko.io");
+        dto1.setName("Так себе пикча");
+        dto1.setSize(new BigDecimal("12124015423"));
+//        dto1.setPreview();
         dtoList.add(dto1);
         dtoList.add(dto2);
         // TODO remove before flight
