@@ -3,14 +3,16 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="jsStuff.js"></script>
 </head>
 <body>
 <div>
     Выберите файл для загрузки
 </div>
 <div>
-    <form action='/search'>
-        <input type="file"/>
+    <form id='myForm' action='/api/search/upload'  method="post" enctype="multipart/form-data">
+        <input id='file' type="file" name="file" size="500000000"/>
         </br>
         <input type='submit'/>
     </form>
@@ -18,8 +20,6 @@
 <div>
     Результаты поиска
 </div>
-<div>
-    Результатов нет
-</div>
+<div id="response"></div>
 </body>
 </html>
